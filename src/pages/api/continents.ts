@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { continents } from './continents.json'
+import { continents } from '../../continents.json'
 
 export default async function Continents(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
