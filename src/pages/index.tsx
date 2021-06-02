@@ -1,11 +1,22 @@
 import { Box, Center, Divider, Text, useBreakpointValue } from "@chakra-ui/react";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import { Banner } from "../components/Banner";
 import { Header } from "../components/Header";
 import { List } from "../components/List";
 import { Swiper } from "../components/Swiper";
+import { api } from "../services/api";
 
-export default function Home() {
+interface Continent {
+  name: string;
+  sliderDescription: string;
+}
+
+interface HomeProps {
+  continents: Continent[]
+}
+
+export default function Home({ continents }: HomeProps) {
   const isMD = useBreakpointValue({
     base: false,
     md: true,
@@ -23,8 +34,8 @@ export default function Home() {
     </Head>
 
     <Header />
-    <Banner isWidescreen={isMD} />
-    <List isWidescreen={isMD} />
+    <Banner isWidescreen={ isMD } />
+    <List isWidescreen={ isMD } />
 
     <Center mb={['6', '14']}>
       <Divider orientation='horizontal' bg='gray.700' w='60px' opacity='1' />
@@ -38,8 +49,25 @@ export default function Home() {
     </Center>
 
     <Box mt={['5', '14']} mb={['6', '10']}>
-      <Swiper isWidescreen={isLG} />
+      <Swiper isWidescreen={ isLG } continents={ continents } />
     </Box>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await api.get('continents')
+
+  const continents = data.map(continent => {
+    return {
+      name: continent.name,
+      sliderDescription: continent.sliderDescription
+    }
+  })
+
+  return {
+    props: {
+      continents
+    }
+  }
 }

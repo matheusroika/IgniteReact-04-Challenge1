@@ -7,7 +7,7 @@ interface TwoListItemsProps extends SimpleGridProps {
 
 export function TwoListItems({ item1, item2, ...rest }: TwoListItemsProps) {
   return (
-    <SimpleGrid minChildWidth={100} spacing='1' {...rest}>
+    <SimpleGrid minChildWidth={100} spacing='6' {...rest}>
       <ChakraListItem>
         <Text as='span'>{ item1 }</Text>
         </ChakraListItem>

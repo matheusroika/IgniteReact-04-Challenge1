@@ -1,0 +1,203 @@
+{
+  "continents" : [
+    {
+      "slug": "europa",
+      "name": "Europa",
+      "sliderDescription": "Conhecido como velho mundo.",
+      "bannerDescription": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
+      "countries": 50,
+      "languages": 72,
+      "cities100": 32,
+      "cities": [
+        {
+          "city": "Londres",
+          "country": "Reino Unido"
+        },
+        {
+          "city": "Paris",
+          "country": "França"
+        },
+        {
+          "city": "Roma",
+          "country": "Itália"
+        },
+        {
+          "city": "Praga",
+          "country": "República Tcheca"
+        },
+        {
+          "city": "Amsterdã",
+          "country": "Holanda"
+        },
+        {
+          "city": "Barcelona",
+          "country": "Espanha"
+        },
+        {
+          "city": "Milão",
+          "country": "Itália"
+        },
+        {
+          "city": "Viena",
+          "country": "Áustria"
+        },
+        {
+          "city": "Berlim",
+          "country": "Alemanha"
+        },
+        {
+          "city": "Veneza",
+          "country": "Itália"
+        }
+      ]
+    },
+    {
+      "slug": "asia",
+      "name": "Ásia",
+      "sliderDescription": "O maior continente.",
+      "bannerDescription": "A Ásia é o maior dos continentes, tanto em área como em população. Abrange um terço das partes sólidas da superfície da Terra e é responsável por abrigar quase três quintos da população mundial. A Ásia faz fronteira no lado ocidental com a África e com a Europa, e no lado oriental com o oceano Pacífico. O ponto extremo setentrional do continente está localizado no oceano Glacial Ártico.",
+      "countries": 49,
+      "languages": 199,
+      "cities100": 46,
+      "cities": [
+        {
+          "city": "Hong Kong",
+          "country": "China"
+        },
+        {
+          "city": "Bangkok",
+          "country": "Tailândia"
+        },
+        {
+          "city": "Singapura",
+          "country": "Singapura"
+        },
+        {
+          "city": "Macau",
+          "country": "Macau"
+        },
+        {
+          "city": "Dubai",
+          "country": "Emirados Árabes"
+        },
+        {
+          "city": "Kuala Lumpur",
+          "country": "Malásia"
+        },
+        {
+          "city": "Shenzhen",
+          "country": "China"
+        },
+        {
+          "city": "Phuket",
+          "country": "Tailândia"
+        },
+        {
+          "city": "Déli",
+          "country": "Índia"
+        },
+        {
+          "city": "Tóquio",
+          "country": "Japão"
+        }
+      ]
+    },
+    {
+      "slug": "americas",
+      "name": "Américas",
+      "sliderDescription": "Tem de tudo um pouco.",
+      "bannerDescription": "América ou Américas é o continente localizado no hemisfério ocidental e que se estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de 15 mil quilômetros. O seu extremo oriental insular (não-continental) encontra-se na Groenlândia, o Nordostrundingen, enquanto o ocidental localiza-se nas Aleutas.",
+      "countries": 36,
+      "languages": 34,
+      "cities100": 16,
+      "cities": [
+        {
+          "city": "Nova York",
+          "country": "Estados Unidos"
+        },
+        {
+          "city": "Miami",
+          "country": "Estados Unidos"
+        },
+        {
+          "city": "Los Angeles",
+          "country": "Estados Unidos"
+        },
+        {
+          "city": "Cancun",
+          "country": "México"
+        },
+        {
+          "city": "Toronto",
+          "country": "Canadá"
+        },
+        {
+          "city": "Vancouver",
+          "country": "Canadá"
+        },
+        {
+          "city": "Buenos Aires",
+          "country": "Argentina"
+        },
+        {
+          "city": "Lima",
+          "country": "Peru"
+        },
+        {
+          "city": "Santiago",
+          "country": "Chile"
+        },
+        {
+          "city": "Rio de Janeiro",
+          "country": "Brasil"
+        }
+      ]
+    },
+    {
+      "slug": "oceania",
+      "name": "Oceania",
+      "sliderDescription": "Paisagens exóticas.",
+      "bannerDescription": "Oceania ou Oceânia é uma região geográfica composta por vários grupos de ilhas do oceano Pacífico (Polinésia, Melanésia e Micronésia). O termo Oceania foi criado em 1831 pelo explorador francês Dumont d'Urville. O termo é usado hoje em vários idiomas para designar uma região geográfica e política que compreende o continente da Austrália e ilhas do Oceano Pacífico adjacentes.",
+      "countries": 14,
+      "languages": 38,
+      "cities100": 3,
+      "cities": [
+        {
+          "city": "Sydney",
+          "country": "Austrália"
+        },
+        {
+          "city": "Melbourne",
+          "country": "Austrália"
+        },
+        {
+          "city": "Auckland",
+          "country": "Nova Zelândia"
+        }
+      ]
+    },
+    {
+      "slug": "africa",
+      "name": "África",
+      "sliderDescription": "O continente mais antigo.",
+      "bannerDescription": "A África é o terceiro continente mais extenso com cerca de 30 milhões de quilômetros quadrados, cobrindo 20,3 % da área total da terra firme do planeta. É o segundo continente mais populoso da Terra com cerca de um bilhão de pessoas, representando cerca de um sétimo da população do mundo, e 54 países independentes. Apresenta grande diversidade étnica, cultural, social e política.",
+      "countries": 54,
+      "languages": 60,
+      "cities100": 3,
+      "cities": [
+        {
+          "city": "Joanesburgo",
+          "country": "África do Sul"
+        },
+        {
+          "city": "Cairo",
+          "country": "Egito"
+        },
+        {
+          "city": "Marraquexe",
+          "country": "Marrocos"
+        }
+      ]
+    }
+  ]
+}

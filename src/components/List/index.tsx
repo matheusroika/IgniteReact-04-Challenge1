@@ -21,7 +21,7 @@ export function List({ isWidescreen }: WidescreenProp) {
   return (
     <UnorderedList
       stylePosition='inside'
-      mx='12'
+      mx={['8', '12']}
       my='9'
       textAlign='center'
       fontWeight='medium'
@@ -29,8 +29,8 @@ export function List({ isWidescreen }: WidescreenProp) {
       css='li::marker {color: #FFBA08; font-size: 1.5rem;}'
     >
       <SimpleGrid spacing='1' gridTemplateColumns='1fr 1fr' justify='center'>
-        <TwoListItems item1='vida noturna' item2='praia' />
-        <TwoListItems item1='moderno' item2='clássico' />
+        <TwoListItems item1='vida noturna' item2='moderno' textAlign={['left', 'center']} />
+        <TwoListItems item1='praia' item2='clássico' textAlign={['right', 'center']} />
       </SimpleGrid>
       <ChakraListItem marginTop='6'>e mais...</ChakraListItem>
     </UnorderedList>

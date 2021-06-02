@@ -9,7 +9,16 @@ import { WidescreenProp } from "../../types/components";
 
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
 
-export function Swiper({ isWidescreen }: WidescreenProp) {
+interface Continent {
+  name: string;
+  sliderDescription: string;
+}
+
+interface SwiperProps extends WidescreenProp {
+  continents: Continent[];
+}
+
+export function Swiper({ isWidescreen, continents }: SwiperProps) {
   return (
     <>
     <SwiperSwiper
@@ -21,24 +30,11 @@ export function Swiper({ isWidescreen }: WidescreenProp) {
       className="mySwiper"
       autoHeight
     >
-      <SwiperSlide>
-        <SwiperImage continent='Europa' description='Conhecido como velho mundo.' isWidescreen={isWidescreen} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperImage continent='Ásia' description='O continente mais antigo.' isWidescreen={isWidescreen} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperImage continent='América do Sul' description='Muitas belezas naturais.' isWidescreen={isWidescreen} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperImage continent='América do Norte' description='Tem de tudo um pouco.' isWidescreen={isWidescreen} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperImage continent='Oceania' description='Paisagens exóticas.' isWidescreen={isWidescreen} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperImage continent='África' description='Cultura impressionante.' isWidescreen={isWidescreen} />
-      </SwiperSlide>
+      { continents.map(continent => (
+        <SwiperSlide key={ continent.name }>
+          <SwiperImage continent={ continent.name } description={ continent.sliderDescription } isWidescreen={isWidescreen} />
+        </SwiperSlide>
+      ))}
     </SwiperSwiper>
     </>
   )

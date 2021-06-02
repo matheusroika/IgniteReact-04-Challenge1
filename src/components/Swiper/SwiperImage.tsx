@@ -12,7 +12,7 @@ export function SwiperImage({ continent, description, isWidescreen }: SwiperImag
 
   return (
     <Box position='relative' w={['auto', 'auto', 'auto', 'auto', '1240px']}>
-      <NextLink href={`/${normalizedContinent}`} passHref>
+      <NextLink href={`/continents/${normalizedContinent}`} passHref>
         <Link 
           position='absolute'
           top='50%'
@@ -22,6 +22,7 @@ export function SwiperImage({ continent, description, isWidescreen }: SwiperImag
           fontWeight='bold'
           textAlign='center'
           color='gray.50'
+          _hover={{ textDecoration: 'none', color: 'yellow.500' }}
         >
           <Text fontSize={['2xl', '2xl', '3xl', '4xl', '5xl']}>
             { continent }
