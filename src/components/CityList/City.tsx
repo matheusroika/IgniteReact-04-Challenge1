@@ -7,8 +7,8 @@ interface CityProps {
 }
 
 export function City({ city, country, continent }: CityProps) {
-  const normalizedCity = city.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "").toLowerCase()
-  const normalizedCountry = country.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "").toLowerCase()
+  const normalizedCity = city.normalize('NFD').replace(/[\u0300-\u036f]| /g, "").toLowerCase()
+  const normalizedCountry = country.normalize('NFD').replace(/[\u0300-\u036f]| /g, "").toLowerCase()
 
   return (
     <Box w='64' ml='auto' mr='auto' borderTopRadius='4px' overflow='hidden'>
