@@ -9,7 +9,7 @@ export function City({ city, country }: CityProps) {
   const normalizedCity = city.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "").toLowerCase()
 
   return (
-    <Box w='64' my='5' mx='auto'>
+    <Box w='64' ml='auto' mr='auto'>
       <Image src={`/europa/cidades/${normalizedCity}.jpg`} />
       <Flex justify='space-between' padding='6' border='solid' borderWidth='1px' borderColor='yellow.250' borderRadius='1'>
         <Box>

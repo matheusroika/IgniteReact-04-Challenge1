@@ -17,3 +17,23 @@
   font-size: 1.25rem;
   font-weight: 900;
 }
+
+@media (min-width: 1240px) {
+  .swiper-container {
+    width: 1240px;
+  }
+
+  .swiper-container > .swiper-button-next::after,
+  .swiper-container > .swiper-button-prev::after {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .swiper-container > .swiper-button-next {
+    right: 42px;
+  }
+
+  .swiper-container > .swiper-button-prev {
+    left: 42px;
+  }
+}

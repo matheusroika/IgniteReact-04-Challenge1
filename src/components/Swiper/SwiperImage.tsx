@@ -1,16 +1,17 @@
 import { Box, Image, Link, Text } from "@chakra-ui/react";
 import NextLink from 'next/link'
+import { WidescreenProp } from "../../types/components";
 
-interface SwiperImageProps {
+interface SwiperImageProps extends WidescreenProp {
   continent: string;
   description: string;
 }
 
-export function SwiperImage({ continent, description }: SwiperImageProps) {
+export function SwiperImage({ continent, description, isWidescreen }: SwiperImageProps) {
   const normalizedContinent = continent.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "").toLowerCase()
 
   return (
-    <Box position='relative'>
+    <Box position='relative' w={['auto', 'auto', 'auto', 'auto', '1240px']}>
       <NextLink href={`/${normalizedContinent}`} passHref>
         <Link 
           position='absolute'
@@ -22,15 +23,22 @@ export function SwiperImage({ continent, description }: SwiperImageProps) {
           textAlign='center'
           color='gray.50'
         >
-          <Text fontSize='2xl'>
+          <Text fontSize={['2xl', '2xl', '3xl', '4xl', '5xl']}>
             { continent }
           </Text>
-          <Text fontSize='sm' mt='2'>
+          <Text fontSize={['sm', 'sm', 'md', 'lg', '2xl']} mt='2'>
             { description }
           </Text>
         </Link>
       </NextLink>
-      <Image position='relative' zIndex={-1} src={`${normalizedContinent}/slider-mobile.jpg`} w='100%' />
+      <Image
+        position='relative'
+        zIndex={-1}
+        src={ isWidescreen
+          ? `${normalizedContinent}/slider.jpg`
+          : `${normalizedContinent}/slider-mobile.jpg`}
+        w={['100% !important', 'auto']}
+      />
     </Box>
   )
 }
