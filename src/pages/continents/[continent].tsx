@@ -1,11 +1,13 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react"
-import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next"
+import { GetStaticPaths, GetStaticProps } from "next"
 import Head from "next/head"
+
 import { CityList } from "../../components/CityList"
 import { ContinentBanner } from "../../components/ContinentBanner"
 import { ContinentDescription } from "../../components/ContinentDescription"
 import { Header } from "../../components/Header"
-import { api } from "../../services/api"
+
+import { continents } from '../../continents.json'
 
 interface Cities {
   city: string;
@@ -59,9 +61,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { continent } = params
-  const { data } = await api.get('continents')
 
-  const continentData = data.find(currentContinent => currentContinent.slug === continent)
+  const continentData = continents.find(currentContinent => currentContinent.slug === continent)
 
   return {
     props: {

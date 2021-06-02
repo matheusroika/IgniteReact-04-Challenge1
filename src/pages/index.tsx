@@ -1,11 +1,13 @@
 import { Box, Center, Divider, Text, useBreakpointValue } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 import Head from "next/head";
+
 import { Banner } from "../components/Banner";
 import { Header } from "../components/Header";
 import { List } from "../components/List";
 import { Swiper } from "../components/Swiper";
-import { api } from "../services/api";
+
+import { continents } from '../continents.json'
 
 interface Continent {
   name: string;
@@ -56,9 +58,7 @@ export default function Home({ continents }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get('continents')
-
-  const continents = data.map(continent => {
+  const continentsObject = continents.map(continent => {
     return {
       name: continent.name,
       sliderDescription: continent.sliderDescription
@@ -67,7 +67,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      continents
+      continents: continentsObject
     },
     revalidate: 60 * 60 * 24 //24 hours
   }
