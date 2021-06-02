@@ -8,7 +8,7 @@ interface SwiperImageProps extends WidescreenProp {
 }
 
 export function SwiperImage({ continent, description, isWidescreen }: SwiperImageProps) {
-  const normalizedContinent = continent.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "").toLowerCase()
+  const normalizedContinent = continent.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()
 
   return (
     <Box position='relative' w={['auto', 'auto', 'auto', 'auto', '1240px']}>
