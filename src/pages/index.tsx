@@ -58,7 +58,8 @@ export default function Home({ continents }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const continentsObject = continents.map(continent => {
+  const continentsObject = continents
+  const continentsFiltered = continentsObject.map(continent => {
     return {
       name: continent.name,
       sliderDescription: continent.sliderDescription
@@ -67,7 +68,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      continents: continentsObject
+      continents: continentsFiltered
     },
     revalidate: 60 * 60 * 24 //24 hours
   }

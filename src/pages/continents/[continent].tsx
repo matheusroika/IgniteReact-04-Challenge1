@@ -61,8 +61,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { continent } = params
+  const continentObjects = continents
 
-  const continentData = continents.find(currentContinent => currentContinent.slug === continent)
+  const continentData = continentObjects.find(currentContinent => currentContinent.slug === continent)
 
   return {
     props: {
