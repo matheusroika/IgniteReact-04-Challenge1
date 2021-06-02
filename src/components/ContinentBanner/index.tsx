@@ -7,7 +7,7 @@ interface ContinentBannerProps {
 }
 
 export function ContinentBanner({ children, isWidescreen }: ContinentBannerProps) {
-  const normalizedCountry = children.toString().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "").toLowerCase()
+  const normalizedCountry = children.toString().normalize('NFD').replace(/[\u0300-\u036f]| /g, "").toLowerCase()
 
   return (
     <Box position='relative' w='100%'>
