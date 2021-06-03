@@ -11,7 +11,7 @@ export function City({ city, country, continent }: CityProps) {
   const normalizedCountry = country.normalize('NFD').replace(/[\u0300-\u036f]| /g, "").toLowerCase()
 
   return (
-    <Box w='64' ml='auto' mr='auto' borderTopRadius='4px' overflow='hidden'>
+    <Box w='64' ml={['auto', '0', '0', '0', ' 0']} mr={['auto', '0', '0', '0', '0']} borderTopRadius='4px' overflow='hidden'>
       <Image src={`/${continent}/cidades/${normalizedCity}.jpg`} />
       <Flex justify='space-between' padding='6' border='solid' borderWidth='1px' borderColor='yellow.250' borderRadius='4px'>
         <Box>
