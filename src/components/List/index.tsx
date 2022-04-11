@@ -28,7 +28,7 @@ export function List({ isWidescreen }: WidescreenProp) {
       fontSize='lg'
       css='li::marker {color: #FFBA08; font-size: 1.5rem;}'
     >
-      <SimpleGrid spacing='1' gridTemplateColumns='1fr 1fr' justify='center'>
+      <SimpleGrid spacing='1' gridTemplateColumns='1fr 1fr'>
         <TwoListItems item1='vida noturna' item2='moderno' textAlign={['left', 'center']} />
         <TwoListItems item1='praia' item2='clássico' textAlign={['right', 'center']} />
       </SimpleGrid>
