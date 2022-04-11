@@ -28,7 +28,6 @@ export function Swiper({ isWidescreen, continents }: SwiperProps) {
       mousewheel={true}
       keyboard={true}
       className="mySwiper"
-      autoHeight
     >
       { continents.map(continent => (
         <SwiperSlide key={ continent.name }>
